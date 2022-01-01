@@ -2,6 +2,8 @@
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
+// import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract Token {
     string public name = "Deffect Token";
@@ -11,7 +13,8 @@ contract Token {
     mapping(address => uint256) balancesMapping;
 
     constructor() {
-        balancesMapping[msg.sender] = totalSupply;
+        // _mint(msg.sender, 10000 * 10**18);
+        balancesMapping[msg.sender] = totalSupply * 10;
         owner = msg.sender;
     }
 
@@ -28,4 +31,8 @@ contract Token {
     {
         return balancesMapping[_accountAddress];
     }
+
+    function mint(address _to, uint _amount) external { }
+
+    function burn() private { }
 }
