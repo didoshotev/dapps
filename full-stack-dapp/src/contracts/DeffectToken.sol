@@ -1,8 +1,9 @@
-pragma solidity ^0.5.0;
+//SPDX-License-Identifier: Unlicense
+pragma solidity ^0.8.0;
 
-contract DappToken {
-    string  public name = "DApp Token";
-    string  public symbol = "DAPP";
+contract DeffectToken {
+    string  public name = "Deffect Token";
+    string  public symbol = "DFT";
     uint256 public totalSupply = 1000000000000000000000000; // 1 million tokens
     uint8   public decimals = 18;
 
@@ -21,7 +22,7 @@ contract DappToken {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    constructor() public {
+    constructor() {
         balanceOf[msg.sender] = totalSupply;
     }
 
