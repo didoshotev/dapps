@@ -32,6 +32,7 @@ module.exports = async function (deployer, network, accounts) {
             10000,
             10000,
             admin,
+            
             Math.floor(Date.now() / 1000) + 60 * 10
         );
         const pair = await Pair.at(pairAddress);

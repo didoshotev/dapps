@@ -18,6 +18,6 @@ module.exports = async function (deployer, network, accounts) {
 	// Transfer some Deffect token to the TokenFarm 
 	await deffectToken.transfer(tokenFarm.address, '1000000000000000000000000');
 
-	// Transfer 100 Mock DAI tokens to investor
+	// Transfer 1000 Mock DAI tokens to investor
 	await daiToken.transfer(accounts[1], '1000000000000000000000'); 
 };

@@ -35,6 +35,7 @@ contract DeffectToken {
     }
 
     function approve(address _spender, uint256 _value) public returns (bool success) {
+        // require(1 == 2, 'test failing');
         allowance[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value);
         return true;
