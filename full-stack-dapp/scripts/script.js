@@ -12,4 +12,5 @@ module.exports = async function(callback) {
     
     const balanceOfInvestor = web3.utils.fromWei(await (await mDaiToken.balanceOf(accounts[1])).toString());
     console.log(`Balance of mock dai tokens: `, balanceOfInvestor);
+    console.log('branch test-b making changes');
 }
