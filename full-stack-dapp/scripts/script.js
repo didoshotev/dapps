@@ -6,7 +6,6 @@ module.exports = async function(callback) {
     const tokenFarm = await TokenFarm.deployed();
     const farmName = await tokenFarm.name();
     console.log(`Farm name: ${farmName}`);
-    // console.log(accounts);
     console.log(`Farm address: `, tokenFarm.address);
     console.log('Investor account', accounts[1]);
     const mDaiToken = await DaiToken.deployed();
