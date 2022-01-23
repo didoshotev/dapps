@@ -34,4 +34,8 @@ contract TokenFarm {
         isCurrentlyStaking[msg.sender] = true;
         hasStaked[msg.sender] = true;
     }
+    
+    // 1. Stake Tokens. (deposit)
+    // 2. Unstake Tokens. (withdraw)
+    // 3. Issuing Tokens. (earn tokens as reward for staking)
 }
